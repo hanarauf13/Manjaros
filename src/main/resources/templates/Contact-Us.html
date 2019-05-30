@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+    <script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <title>Manjaros - Contact-Us</title>
+</head>
+<div class="header">
+<img src="../static/images/manjarosemblem.png" th:src="@{/images/manjarosemblem.png}" alt="emblem" class="responsive" style="width:100px;height:100px;"
+     align="left"/>
+<h1 style="text-align: center">Contact-Us </h1>
+</div>
+<body>
+
+<main>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="About.html" th:href="@{/}">Home</a></li>
+                <li><a href="Menu.html" th:href="@{/Menu}">Menu</a></li>
+                <li><a href="Contact-Us.html" th:href="@{/Contact-Us}">Contact-Us</a></li>
+                <li><a href="feedback.html" th:href="@{/feedback}">Reviews</a></li>
+                <li><a href="Profile.html" th:href="@{/profile}">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+</main>
+<h3 class="contacthq" style="text-align: center">CONTACT HQ</h3>
+<span class="contact"
+      style="text-align: center"> PLEASE CONTACT YOUR LOCAL MANJAROS VIA TELEPHONE FOR RESERVATIONS</span>
+<br>
+<br>
+<span class = 'message'>Leave you're contact details below and we will get back to you ASAP. </span>
+<span class="message">This will automatically sign you up for Email subscriptions on offers and information</span>
+<br>
+<form action="/Contact-Us" name="myForm"
+    onsubmit="return validateForm()" method="post" th:object="${restaurantUser}">
+    <br>
+    <tr>
+        <td><label for="title">Title:</label></td>
+        <td>
+            <select id="title">
+                <option value="Mr">Mr</option>
+                <option value="Mrs">Mrs</option>
+                <option value="Miss">Miss</option>
+                <option value="Ms">Ms</option>
+            </select>
+        </td>
+    </tr>
+    <br>
+    <tr>
+        <td>
+           <label>First Name: </label>  <br>
+            <input type="text" name="name" pattern="[A-Za-z]*" title="Your name must contain only letters."/>
+        </td>
+    </tr>
+    <br>
+    <tr>
+        <td>
+            <label> Email:</label> <br>
+            <input type="text" th:name="name">
+        </td>
+    </tr>
+    <br>
+    <!--<td>-->
+        <!--<label><b>Password</b></label>-->
+        <!--<input type="password" name="password" id="password" placeholder="Enter password" required th:field="*{password}">-->
+    <!--</td>-->
+    <br>
+    <tr>
+        <td>
+            <label>Phone number</label>
+            <input type="tel" name="number" pattern="[0-9]*"></td>
+        </td>
+    </tr>
+    <br>
+    <tr>
+        <td>
+            <input type="submit" name="Submit">
+        </td>
+    </tr>
+</form>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<u class="halal" style="text-align: center"> Halal Queries</u>
+<p class="desc">We set ourselves high standards across all our restaurants and with our suppliers.
+    As part of our commitment to maintaining these standards,
+    we work closely with the Halal Food Authority, who accredit and regularly audit our Halal restaurants.</p>
+<br>
+<br>
+<h4 class="h4">WHAT IS DIFFERENT IN A HALAL RESTAURANT?</h4>
+<p>In our Halal restaurants we do not handle any pork ingredients,
+    and all the food and drink items served in these restaurants are approved by the Halal Food Authority. </p>
+<p> This ensures the very best Halal standards but does mean that certain menu items and limited time offers may not be available.</p>
+<p>Another key consideration for us was that we were able to ensure that the halal certified chicken would also meet the rigorous animal welfare standards we employ in the UK,
+    and we consulted leading animal welfare groups about this.</p>
+<p>There is no compromise to our welfare standards. We continue to insist that our poultry is stunned before slaughter,
+    using a technique called 'stun-to-stun'. </p>
+<p>We only buy high quality, Grade A, farm-assured chicken from trustworthy suppliers,
+    who are contractually required to meet or exceed all relevant UK and EU legislation and this will not change.
+</p>
+<img src="../static/images/halal.png" th:src="@{/images/halal.png}" alt="halal" class="responsive" style="width:100px;height:100px;"/>
+
+<br>
+<br>
+<h3> Reviews</h3>
+<br>
+    <table>
+        <tr>
+        </tr>
+        <tr th:each="feedback : ${feedbacks}">
+            <td th:text="${restaurantUser.feedbacks}">
+            </td>
+        </tr>
+
+    </table>
+<script type="text/javascript" src="../static/js/main.js" th:src="@{/js/main.js}">DisplayReview();</script>
+
+<br>
+<br>
+<footer>&copy; Hana Rauf</footer>
+
+<script type="text/javascript" src="../static/js/main.js" th:src="@{/js/main.js}">validateForm();</script>
+</body>
+</html>

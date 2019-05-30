@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Manjaros - About</title>
+</head>
+<div class="header">
+<img src="../static/images/manjarosemblem.png" th:src="@{/images/manjarosemblem.png}" alt="emblem" class="responsive" style="width:100px;height:100px;" align="left" />
+    <h1 th:align="center">Manjaros</h1>
+</div>
+
+<body id= "Home" class="template-page" style="overflow: visible; height: auto;">
+    <header class="banner">
+        <main>
+                     <nav>
+                        <ul>
+                            <li><a href="About.html" th:href="@{/}">Home</a></li>
+                            <li><a href="Menu.html" th:href="@{/Menu}">Menu</a></li>
+                            <li><a href="Contact-Us.html" th:href="@{/Contact-Us}">Contact-Us</a></li>
+                            <li><a href="feedback.html" th:href="@{/feedback}">Reviews</a></li>
+                            <li><a href="Profile.html" th:href="@{/Profile}">profile</a></li>
+                        </ul>
+                     </nav>
+        </main>
+    </header>
+    <br><img src="../static/images/Pizzamanj.jpg" th:src="@{/images/Pizzamanj.jpg}" alt="Pizza" class="responsive" align="center" style="width: 100%; height:100%;"/>
+    <article>
+        <!--content is sourced from the Manjaros website -->
+    <p>Manjaros cuisine is based on a blend of African and Caribbean flavours.
+        Our mouth-watering spices originate from the heart of Africa and isles of the Caribbean.
+        Selected dishes have been prepared to create a sensational zest of spices commonly used throughout different generations in Africa and the Caribbean islands.
+    </p>
+    <p>&nbsp;</p>
+    <img src="../static/images/wingsmanj.jpg" th:src="@{/images/wingsmanj.jpg}" alt="Wings" align="center" class="responsive" style="width:200px;height:200px;"/>
+    
+    <p>Only the finest selection of natural ingredients is worthy of our famous Manjaros Sauce,
+        which is used to season and spice up our signature dishes.
+        This signature sauce comes in a variety of flavours and spice levels from the very mild alligator peppers to hot bird eye chilies.
+    </p>
+    </article>
+    <iframe width="420" height="315"
+            src="https://www.youtube.com/embed/BFdDLnNHjAo" align="center">
+    </iframe>
+
+    <p>Manjaros has been a favourite hotspot for both locals and visitors throughout Northern England.
+        The restaurant is frequented by a variety of customers from university students and families to famous celebrities.
+    </p>
+
+    <p>
+        Our original branch has been a popular spot for a few famous faces like The Game, David Haye and Tinie Tempah.
+        Manjaros have proven itself to be a must-visit restaurant in all locations.
+    </p>
+
+    <section>Burst of flavours on our new exciting menu is not the only attraction for regulars.
+        Our restaurants have been built and decorated to give our customers the best dining experience.
+    </section>
+<br>
+    <p>
+        The newly renovated restaurant in Teeside has been transformed in to a modern two-story eatery.
+    </p>
+
+    <br>
+    <section>
+        The dessert bar and open-air balcony are also distinctive features that are rare in the area.
+    </section>
+    <br>
+<p>
+    At Manjaros, we don't only promise to serve you with the best ingredients but also top-notch service and great ambience.
+
+</p>
+
+<footer>&copy; Hana Rauf </footer>
+<script type="text/javascript" src="../static/js/main.js" th:src="@{/js/main.js}">validateForm();</script>
+
+</body>
+</html>

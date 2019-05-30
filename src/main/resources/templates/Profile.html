@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Manjaros - Profile</title>
+</head>
+<div class="header">
+    <img src="../static/images/manjarosemblem.png" th:src="@{/images/manjarosemblem.png}" alt="emblem" class="responsive" style="width:100px;height:100px;" align="left" />
+    <h1 th:align="center">Profile</h1>
+</div>
+
+<body id= "Profile" class="template-page" style="overflow: visible; height: auto;">
+<header class="banner">
+    <main>
+        <nav>
+            <ul>
+                <li><a href="About.html" th:href="@{/}">Home</a></li>
+                <li><a href="Menu.html" th:href="@{/Menu}">Menu</a></li>
+                <li><a href="Contact-Us.html" th:href="@{/Contact-Us}">Contact-Us</a></li>
+                <li><a href="feedback.html" th:href="@{/feedback}">Reviews</a></li>
+                <li><a href="Profile.html" th:href="@{/profile}">Profile</a></li>
+
+            </ul>
+        </nav>
+    </main>
+</header>
+    <h1>Profile</h1>
+
+    <section>
+        <dl>
+            <dt style="font-style: oblique; font-weight: bold">Email:</dt>
+            <dd th:text="${restaurantUser.getRestaurantUser().email}">bob@company.com</dd>
+            <dt style="font-style: oblique; font-weight: bold">First Name:</dt>
+            <dd th:text="${restaurantUser.getRestaurantUser().firstName}">Bob</dd>
+            <dt style="font-style: oblique; font-weight: bold">Last Name:</dt>
+            <dd th:text="${restaurantUser.getRestaurantUser().lastName}">Bob</dd>
+        </dl>
+
+        <table>
+            <tr>
+                <th>Feedback</th>
+            </tr>
+            <tr th:each="feedback : ${restaurantUser.feedbacks}">
+                <td th:text="${feedback.feedback}" style="text-align: center">Review</td>
+            </tr>
+        </table>
+        <br/>
+        <br/>
+    </section>
+            <footer>&copy; Hana Rauf </footer>
+            <script type="text/javascript" src="../static/js/main.js" th:src="@{/js/main.js}">validateForm();</script>
+
+</body>
+</html>

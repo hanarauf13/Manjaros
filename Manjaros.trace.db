@@ -1,0 +1,33 @@
+2019-04-02 15:23:39 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "FEEDBACK[*] FEEDBACK"; expected "FROM, {"; SQL statement:
+FEEDBACK FEEDBACK [42001-197]
+2019-04-02 15:23:42 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "FEEDBACK[*]"; expected "FROM, {"; SQL statement:
+FEEDBACK [42001-197]
+2019-04-02 15:23:43 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "FEEDBACK[*]"; expected "FROM, {"; SQL statement:
+FEEDBACK [42001-197]
+2019-04-02 15:23:53 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "EMAIL[*]"; expected "EXPLAIN, EXECUTE, {"; SQL statement:
+EMAIL [42001-197]
+2019-04-02 15:23:55 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "EMAIL[*] FEEDBACK"; expected "EXPLAIN, EXECUTE, {"; SQL statement:
+EMAIL FEEDBACK [42001-197]
+2019-04-02 15:23:58 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "FEEDBACK[*]"; expected "FROM, {"; SQL statement:
+FEEDBACK [42001-197]
+2019-04-02 15:45:07 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "FEEDBACK[*]"; expected "FROM, {"; SQL statement:
+FEEDBACK [42001-197]
+2019-04-03 09:26:24 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "EMAIL[*] SELECT * FROM FEEDBACK"; expected "EXPLAIN, EXECUTE, {"; SQL statement:
+EMAIL SELECT * FROM FEEDBACK [42001-197]
+2019-04-03 09:26:27 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "EMAIL[*]"; expected "EXPLAIN, EXECUTE, {"; SQL statement:
+EMAIL [42001-197]
+2019-04-03 09:26:28 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "EMAIL[*]"; expected "EXPLAIN, EXECUTE, {"; SQL statement:
+EMAIL [42001-197]
+2019-04-03 09:26:49 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT EMAIL * FROM FEEDBACK[*]"; expected "., (, USE, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"; SQL statement:
+SELECT EMAIL * FROM FEEDBACK [42001-197]

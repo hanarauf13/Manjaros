@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Manjaros - Reviews</title>
+</head>
+<div class="header">
+<img src="../static/images/manjarosemblem.png" th:src="@{/images/manjarosemblem.png}" alt="emblem" class="responsive" style="width:100px;height: 100px;" th:align="left"/>
+    <h1 style="text-align: center">Reviews</h1>
+</div>
+<header class= "banner">
+    <main>
+        <nav>
+            <ul>
+                <li><a href="About.html" th:href="@{/}">Home</a></li>
+                <li><a href="Menu.html" th:href="@{/Menu}">Menu</a></li>
+                <li><a href="Contact-Us.html" th:href="@{/Contact-Us}">Contact-Us</a></li>
+                <li><a href="feedback.html" th:href="@{/feedback}">Reviews</a></li>
+                <li><a href="Profile.html" th:href="@{/profile}">profile</a></li>
+            </ul>
+        </nav>
+        </main>
+    </header>
+<br>
+    <section>
+        Manjaros restaurant is committed to provide a safe and pleasurable experience in all our restaurants some of our dishes may contain allergens.
+    </section>
+
+<br>
+    <p>
+        Please advise a member of staff if you have any dietary requirements
+    </p>
+    <form th:action="@{feedbackSubmit}" name="myForm" method="post" th:object="${feedback}"
+    onclick="DisplayReview;">
+    <fieldset>
+        <legend>Feedback</legend>
+        <table>
+
+        <tr>
+            <td>
+                <label>Email: </label>
+                <input type="email" name="email" th:field="*{email}"></td>
+        </tr>
+
+            <tr>
+                <br>
+                <td>
+                    <h4>Feedback form:</h4>
+                </td>
+                <td>
+                    <input type="text" name="feedback" style="width:200px; height:300px;" th:field="*{feedback}">
+                </td>
+            </tr>
+            <br>
+            <!-- Add icon library -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <p class="rating">The average rating for this Restaurant</p>
+            <br>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <tr>
+                <td>
+                    <input type="submit" name="Submit">
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    </form>
+<table>
+    <tr>
+    </tr>
+    <tr th:each="feedback : @{feedbacks}">
+        <td th:text="@{.feedback}">
+        </td>
+    </tr>
+
+</table>
+
+<script type="text/javascript" src="../static/js/main.js" th:src="@{/js/main.js}">validateForm();</script>
+<br>
+<br>
+<p class="fb">All feedback will be used to improve our services as well as your experience here at Manjaros</p>
+<p class="fb">Provide constructive criticism (dont act up or we'll put too much spice in your white boys food kmt) </p>
+<br>
+
+<footer> &copy; Hana Rauf </footer>
+    </body>
+</html>
